@@ -1,0 +1,217 @@
+/*
+ * portfolio.css
+ * ─────────────────────────────────────────────────────────
+ * LEARNER NOTE:
+ * Portfolio cards are laid out in a CSS Grid.
+ * Each card has a colored thumbnail, title, and category.
+ * The filter tabs hide/show cards by adding a .hidden class
+ * via JavaScript (filter.js) — no page reload needed.
+ *
+ * The hover overlay uses opacity transition for a smooth
+ * "peek" effect — a common, clean UX pattern.
+ * ─────────────────────────────────────────────────────────
+ */
+
+/* ── Filter tabs ── */
+.filter-tabs {
+  display: flex;
+  gap: var(--sp-2);
+  flex-wrap: wrap;
+  margin-bottom: var(--sp-5);
+}
+
+.filter-btn {
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  color: var(--clr-text-muted);
+  padding: var(--sp-1) var(--sp-4);
+  border-radius: var(--radius-full);
+  border: 1px solid var(--clr-border);
+  background: transparent;
+  transition: all var(--dur-base) var(--ease-smooth);
+}
+
+.filter-btn:hover {
+  color: var(--clr-white);
+  border-color: var(--clr-accent);
+}
+
+.filter-btn.active {
+  background: var(--clr-accent);
+  color: var(--clr-white);
+  border-color: var(--clr-accent);
+}
+
+/* ── Portfolio grid: 3 columns, matching reference ── */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-3);
+}
+
+@media (max-width: 620px) {
+  .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 400px) {
+  .portfolio-grid { grid-template-columns: 1fr; }
+}
+
+/* ── Individual card ── */
+.portfolio-card {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--clr-surface-2);
+  border: 1px solid var(--clr-border);
+  cursor: pointer;
+  transition: transform var(--dur-base) var(--ease-smooth),
+              box-shadow var(--dur-base) var(--ease-smooth),
+              border-color var(--dur-base) var(--ease-smooth);
+}
+
+.portfolio-card:hover {
+  transform: translateY(-5px) scale(1.01);
+  box-shadow: var(--shadow-accent);
+  border-color: var(--clr-accent);
+}
+
+/* ── Card thumbnail area ── */
+.portfolio-card__thumb {
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background: var(--clr-surface);
+}
+
+.portfolio-card__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Hover overlay shimmer */
+.portfolio-card__thumb::after {
+  content: '→ View';
+  position: absolute;
+  inset: 0;
+  background: rgba(108,99,255,0.55);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--fs-sm);
+  color: var(--clr-white);
+  letter-spacing: 0.06em;
+  opacity: 0;
+  transition: opacity var(--dur-base) var(--ease-smooth);
+}
+
+.portfolio-card:hover .portfolio-card__thumb::after {
+  opacity: 1;
+}
+
+/* ── Card info footer ── */
+.portfolio-card__info {
+  padding: var(--sp-3) var(--sp-3);
+}
+
+.portfolio-card__info h4 {
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  color: var(--clr-white);
+  margin-bottom: 2px;
+}
+
+.portfolio-card__info p {
+  font-size: var(--fs-xs);
+  color: var(--clr-text-muted);
+}
+
+/* ── Hidden state (used by filter JS) ── */
+.portfolio-card.hidden {
+  display: none;
+}
+
+/* ── Lightbox Modal ── */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.9);
+  align-items: center;
+  justify-content: center;
+  padding: var(--sp-4);
+}
+
+.lightbox.active {
+  display: flex;
+}
+
+.lightbox__content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+.lightbox__image {
+  max-width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-accent);
+}
+
+.lightbox__close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: none;
+  border: none;
+  color: var(--clr-white);
+  font-size: 2rem;
+  cursor: pointer;
+  padding: var(--sp-1);
+  line-height: 1;
+  transition: color var(--dur-base) var(--ease-smooth);
+}
+
+.lightbox__close:hover {
+  color: var(--clr-accent);
+}
+
+@media (max-width: 620px) {
+  .lightbox__close {
+    top: var(--sp-2);
+    right: var(--sp-2);
+    font-size: 1.5rem;
+  }
+}
+
+/* ── Light Mode ── */
+html.light-mode .filter-btn:hover {
+  color: #1a1a2e;
+}
+
+html.light-mode .portfolio-card {
+  background: #ffffff;
+  border-color: rgba(0,0,0,0.10);
+}
+
+html.light-mode .portfolio-card__info h4 {
+  color: #1a1a2e;
+}
+
+html.light-mode .portfolio-card__info p {
+  color: #5a5a70;
+}
+
+html.light-mode .portfolio-card__thumb {
+  background: #ebebf0;
+}

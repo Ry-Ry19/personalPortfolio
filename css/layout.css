@@ -1,0 +1,62 @@
+/*
+ * layout.css
+ * ─────────────────────────────────────────────────────────
+ * LEARNER NOTE:
+ * This file controls the outer page layout only.
+ * The .wrapper centers the card and uses CSS Grid to place
+ * sidebar + main-panel side by side — matching the reference image.
+ *
+ * We use min-height: 100vh on the body so the background fills
+ * the screen, but the card itself stays a fixed max-width.
+ * ─────────────────────────────────────────────────────────
+ */
+
+/* ── Full-page centering ── */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--sp-8) var(--sp-4);
+}
+
+/* ── Main card wrapper ──
+   Mimics the reference: contained card, not full-width. */
+.wrapper {
+  display: grid;
+  grid-template-columns: var(--sidebar-width) 1fr;
+  max-width: var(--container-max);
+  width: 100%;
+  min-height: 560px;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--clr-border);
+  /* Subtle ambient glow behind the card */
+  filter: drop-shadow(0 0 60px rgba(102, 0, 255, 0.08));
+}
+
+/* ── Main content panel ── */
+.main-panel {
+  background: var(--clr-surface);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* ── Responsive: stack on small screens ── */
+@media (max-width: 680px) {
+  body {
+    align-items: flex-start;
+    padding: var(--sp-4);
+  }
+
+  .wrapper {
+    grid-template-columns: 1fr;
+    border-radius: var(--radius-lg);
+  }
+}
+
+/* ── Light Mode ── */
+html.light-mode .wrapper {
+  filter: drop-shadow(0 0 40px rgba(20, 18, 18, 0.1));
+}

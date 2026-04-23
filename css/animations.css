@@ -1,0 +1,106 @@
+/*
+ * animations.css
+ * ─────────────────────────────────────────────────────────
+ * LEARNER NOTE:
+ * All @keyframes live here, separate from component styles.
+ * Keyframes define the "from → to" motion path.
+ * They are applied via the animation: property elsewhere.
+ *
+ * Tips for smooth animations:
+ *   - Animate transform & opacity — GPU-composited, no repaint.
+ *   - Avoid animating width/height/top/left — causes layout shifts.
+ *   - Use animation-fill-mode: both so state is held at end.
+ * ─────────────────────────────────────────────────────────
+ */
+
+/* ── Section entry: fade + slide up ── */
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Avatar status dot pulse ── */
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 0 5px rgba(34, 197, 94, 0);
+  }
+}
+
+/* ── Staggered card entry (applied via JS adding .animate class) ── */
+@keyframes cardPop {
+  from {
+    opacity: 0;
+    transform: scale(0.94) translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Initial hidden state for stagger targets */
+.portfolio-card {
+  opacity: 0;
+  animation: cardPop var(--dur-slow) var(--ease-bounce) forwards;
+}
+
+/* Stagger delay — nth-child sets increasing delays */
+.portfolio-card:nth-child(1) { animation-delay: 0.05s; }
+.portfolio-card:nth-child(2) { animation-delay: 0.10s; }
+.portfolio-card:nth-child(3) { animation-delay: 0.15s; }
+.portfolio-card:nth-child(4) { animation-delay: 0.20s; }
+.portfolio-card:nth-child(5) { animation-delay: 0.25s; }
+.portfolio-card:nth-child(6) { animation-delay: 0.30s; }
+.portfolio-card:nth-child(7) { animation-delay: 0.35s; }
+.portfolio-card:nth-child(8) { animation-delay: 0.40s; }
+.portfolio-card:nth-child(9) { animation-delay: 0.45s; }
+
+/* ── Service card stagger (About section) ── */
+.service-card {
+  opacity: 0;
+  animation: fadeSlideIn var(--dur-slow) var(--ease-smooth) forwards;
+}
+
+.service-card:nth-child(1) { animation-delay: 0.1s; }
+.service-card:nth-child(2) { animation-delay: 0.2s; }
+.service-card:nth-child(3) { animation-delay: 0.3s; }
+
+/* ── Page load: sidebar entry ── */
+@keyframes sidebarEntry {
+  from { opacity: 0; transform: translateX(-20px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.sidebar {
+  animation: sidebarEntry 0.6s var(--ease-smooth) both;
+}
+
+/* ── Respect reduced-motion preference ── */
+/*
+ * LEARNER NOTE:
+ * Some users have motion sickness or epilepsy.
+ * prefers-reduced-motion disables animations for them — always include this.
+ */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}

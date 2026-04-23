@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ryan Recososa | GVA · Data Analyst · Web Developer</title>
+
+  <!-- Google Fonts: Distinctive pairing -->
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+
+  <!-- Modular CSS files -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/sidebar.css">
+  <link rel="stylesheet" href="css/portfolio.css">
+  <link rel="stylesheet" href="css/nav.css">
+    
+  <link rel="stylesheet" href="css/portfolio.css" />
+  
+</head>
+
+<body>
+
+  <!-- ===================== WRAPPER ===================== -->
+  <!-- Learner note: The .wrapper centers the card container, 
+       same visual width as the reference image -->
+  <div class="wrapper">
+
+    <!-- ===================== SIDEBAR ===================== -->
+    <aside class="sidebar" aria-label="Profile sidebar">
+
+      <div class="avatar-wrap">
+        <!-- Replace src with your actual photo -->
+        <img
+          class="avatar"
+          src="images/ryprofile.png"
+          alt="Ryan Recososa profile photo"
+        />
+        <span class="status-dot" aria-label="Available for hire"></span>
+      </div>
+
+      <h1 class="sidebar__name">Ryan Recososa</h1>
+      <span class="sidebar__badge">Software Developer</span>
+
+      <!-- Contact info list -->
+      <ul class="sidebar__info" aria-label="Contact information">
+        <li>
+          <span class="icon" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="4" width="20" height="16" rx="2"/>
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+            </svg>
+          </span>
+          <span class="email-wrap">ryanrecososa16@gmail.com</span>
+        </li>
+        <li>
+          <span class="icon" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+          </span>
+          <span>+63 965 428 1416</span>
+        </li>
+        <li>
+          <span class="icon" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+              <line x1="16" y1="2" x2="16" y2="6"/>
+              <line x1="8" y1="2" x2="8" y2="6"/>
+              <line x1="3" y1="10" x2="21" y2="10"/>
+            </svg>
+          </span>
+          <span>May 02, 2004</span>
+        </li>
+        <li>
+          <span class="icon" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+          </span>
+          <span>9200, Iligan City, Lanao Del Norte, Philippines</span>
+        </li>
+      </ul>
+
+      <!-- Social links -->
+      <div class="sidebar__socials" aria-label="Social media links">
+        <a href="https://www.facebook.com/ryan.recososa.2025" aria-label="Facebook" class="social-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+          </svg>
+        </a>
+        <a href="https://x.com/RyanRecososa" aria-label="X (Twitter)" class="social-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+          </svg>
+        </a>
+        <a href="https://www.instagram.com/ryanierecososa/" aria-label="Instagram" class="social-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Download Resume -->
+      <a href="images/Recososa_CV.pdf" class="sidebar__resume-btn" aria-label="Download Resume">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+          <polyline points="7 10 12 15 17 10"/>
+          <line x1="12" y1="15" x2="12" y2="3"/>
+        </svg>
+        <span>Download Resume</span>
+      </a>
+    </aside>
+
+    <!-- ===================== MAIN PANEL ===================== -->
+    <main class="main-panel" aria-label="Main content">
+
+      <!-- Top navigation -->
+      <nav class="top-nav" aria-label="Section navigation">
+        <a href="#about"     class="nav-link active" data-section="about">About</a>
+        <a href="#resume"    class="nav-link"         data-section="resume">Resume</a>
+        <a href="#portfolio" class="nav-link"         data-section="portfolio">Portfolio</a>
+        <a href="#contact"   class="nav-link"         data-section="contact">Contact</a>
+        <div class="theme-iconcontainer">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">
+          <span class="toggle-track">
+            <svg class="side-icon sun-side" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"/>
+              <line x1="12" y1="1" x2="12" y2="3"/>
+              <line x1="12" y1="21" x2="12" y2="23"/>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+              <line x1="1" y1="12" x2="3" y2="12"/>
+              <line x1="21" y1="12" x2="23" y2="12"/>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            </svg>
+            <span class="toggle-thumb"></span>
+            <svg class="side-icon moon-side" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+          </span>
+        </button>
+        </div>
+      </nav>
+
+      <!-- ============ SECTION: ABOUT ============ -->
+      <section id="about" class="section active" aria-labelledby="about-heading">
+  <h2 id="about-heading" class="section__title">About Me</h2>
+
+  <p class="section__intro">
+    I'm a <strong>Software Developer  </strong> specializing in General Virtual Assistance,
+    Data Analysis, and Web Development. I help businesses grow by delivering clean,
+    scalable solutions — remotely, on time, every time.
+  </p>
+
+  <div class="services-grid" aria-label="Service areas">
+    <div class="service-card">
+      <div class="marquee-item"><img src="images/gva.png" alt="General VA"></div>
+      <h3>General VA</h3>
+      <p>Admin support, scheduling, email management, research, and project management for busy professionals.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="marquee-item"><img src="images/dataanalyst.png" alt="Data Analyst"></div>
+      <h3>Data Analyst</h3>
+      <p>Turning raw data into actionable insights using Excel, Python, SQL, and dashboards that tell a story.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="marquee-item"><img src="images/webdevelopment.png" alt="Web Developer"></div>
+      <h3>Web Development</h3>
+      <p>Modern, responsive websites and web apps — from UI/UX design to deployment and maintenance.</p>
+    </div>
+  </div>
+
+  <div class="about-tech-stack" style="margin-top: var(--sp-8);">
+    <h3 class="section__title" style="font-size: var(--fs-md);">Tools & Technologies</h3>
+    <div class="marquee">
+      <div class="marquee-content">
+        <div class="marquee-item"><img src="images/html.png" alt="HTML"></div>
+        <div class="marquee-item"><img src="images/css.png" alt="CSS"></div>
+        <div class="marquee-item"><img src="images/js.png" alt="JavaScript"></div>
+        <div class="marquee-item"><img src="images/nodejs.png" alt="Node.js"></div>
+        <div class="marquee-item"><img src="images/sql.png" alt="SQL"></div>
+        <div class="marquee-item"><img src="images/python.jpg" alt="Python"></div>
+        <div class="marquee-item"><img src="images/excel.png" alt="Excel"></div>
+        <div class="marquee-item"><img src="images/gsheet.png" alt="Google Sheets"></div>
+        <div class="marquee-item"><img src="images/powerbi.png" alt="Power BI"></div>
+        <div class="marquee-item"><img src="images/tableau.png" alt="Tableau"></div>
+        <div class="marquee-item"><img src="images/canva.png" alt="Canva"></div>
+        <div class="marquee-item"><img src="images/pinterist.png" alt="Pinterest"></div>
+        <div class="marquee-item"><img src="images/gdocs.png" alt="Google Docs"></div>
+        <div class="marquee-item"><img src="images/gcalendar.png" alt="Google Calendar"></div>
+        <div class="marquee-item"><img src="images/gform.png" alt="Google Forms"></div>
+        <div class="marquee-item"><img src="images/gmeet.png" alt="Google Meet"></div>
+        <div class="marquee-item"><img src="images/slack.png" alt="Slack"></div>
+        <div class="marquee-item"><img src="images/notion.png" alt="Notion"></div>
+        <div class="marquee-item"><img src="images/msteam.png" alt="Microsoft Teams"></div>
+        <div class="marquee-item"><img src="images/zoom.png" alt="Zoom"></div>
+        <!-- Duplicate for seamless loop -->
+        <div class="marquee-item"><img src="images/html.png" alt="HTML"></div>
+        <div class="marquee-item"><img src="images/css.png" alt="CSS"></div>
+        <div class="marquee-item"><img src="images/js.png" alt="JavaScript"></div>
+        <div class="marquee-item"><img src="images/nodejs.png" alt="Node.js"></div>
+        <div class="marquee-item"><img src="images/sql.png" alt="SQL"></div>
+        <div class="marquee-item"><img src="images/python.jpg" alt="Python"></div>
+        <div class="marquee-item"><img src="images/excel.png" alt="Excel"></div>
+        <div class="marquee-item"><img src="images/gsheet.png" alt="Google Sheets"></div>
+        <div class="marquee-item"><img src="images/powerbi.png" alt="Power BI"></div>
+        <div class="marquee-item"><img src="images/tableau.png" alt="Tableau"></div>
+        <div class="marquee-item"><img src="images/canva.png" alt="Canva"></div>
+        <div class="marquee-item"><img src="images/pinterist.png" alt="Pinterest"></div>
+        <div class="marquee-item"><img src="images/gdocs.png" alt="Google Docs"></div>
+        <div class="marquee-item"><img src="images/gcalendar.png" alt="Google Calendar"></div>
+        <div class="marquee-item"><img src="images/gform.png" alt="Google Forms"></div>
+        <div class="marquee-item"><img src="images/gmeet.png" alt="Google Meet"></div>
+        <div class="marquee-item"><img src="images/slack.png" alt="Slack"></div>
+        <div class="marquee-item"><img src="images/notion.png" alt="Notion"></div>
+        <div class="marquee-item"><img src="images/msteam.png" alt="Microsoft Teams"></div>
+        <div class="marquee-item"><img src="images/zoom.png" alt="Zoom"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <!-- ============ SECTION: RESUME ============ -->
+      <section id="resume" class="section" aria-labelledby="resume-heading">
+        <h2 id="resume-heading" class="section__title">Resume</h2>
+
+        <div class="resume-columns">
+
+          <!-- Experience column -->
+          <div class="resume-col">
+            <h3 class="resume-col__label">Experience</h3>
+
+            <div class="timeline">
+              <div class="timeline__item">
+                <span class="timeline__year">2023 – Now</span>
+                <h4 class="timeline__role">Freelance Web Developer</h4>
+                <p class="timeline__place">Self-employed / Remote</p>
+                <p>Built 20+ client websites, landing pages, and custom dashboards.</p>
+              </div>
+              <div class="timeline__item">
+                <span class="timeline__year">2025 - Now</span>
+                <h4 class="timeline__role">Project Assisted Data Analyst</h4>
+                <p class="timeline__place">Self-employed</p>
+                <p>Cleaned and visualized datasets, automated Excel reports with Python.</p>
+              </div>
+              <div class="timeline__item">
+                <span class="timeline__year">2024 – 2025</span>
+                <h4 class="timeline__role">General Virtual Assistant</h4>
+                <p class="timeline__place">Remote</p>
+                <p>Handled scheduling, data-entry, inbox management, research, and CRM updates.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skills column -->
+          <div class="resume-col">
+            <h3 class="resume-col__label">Skills</h3>
+
+            <!-- Learner note: skill bars use CSS custom properties 
+                 set via inline style for flexibility -->
+            <div class="skill-bars" aria-label="Skill proficiency">
+              <div class="skill">
+                <span class="skill__name">HTML / CSS</span>
+                <div class="skill__bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+                  <div class="skill__fill" style="--pct: 95%"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <span class="skill__name">JavaScript</span>
+                <div class="skill__bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                  <div class="skill__fill" style="--pct: 85%"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <span class="skill__name">Node JS / SQL</span>
+                <div class="skill__bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                  <div class="skill__fill" style="--pct: 80%"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <span class="skill__name">Data Analysis</span>
+                <div class="skill__bar" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
+                  <div class="skill__fill" style="--pct: 88%"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <span class="skill__name">VA / Admin</span>
+                <div class="skill__bar" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100">
+                  <div class="skill__fill" style="--pct: 92%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ============ SECTION: PORTFOLIO ============ -->
+      <section id="portfolio" class="section" aria-labelledby="portfolio-heading">
+        <h2 id="portfolio-heading" class="section__title">Portfolio</h2>
+
+        <!-- Filter tabs -->
+        <div class="filter-tabs" role="tablist" aria-label="Portfolio filter">
+          <button class="filter-btn active" data-filter="all"  role="tab" aria-selected="true">All</button>
+          <button class="filter-btn" data-filter="virtual-assistance"   role="tab" aria-selected="false">Virtual Assistance</button>
+          <button class="filter-btn" data-filter="data-analysis" role="tab" aria-selected="false">Data Analysis</button>
+          <button class="filter-btn" data-filter="webdev"      role="tab" aria-selected="false">Web Development</button>
+        </div>
+
+        <!-- Portfolio grid -->
+        <!-- Learner note: data-category is used by JS to filter cards -->
+        <div class="portfolio-grid" role="list">
+
+          <article class="portfolio-card" data-category="webdev" role="listitem">
+            <div class="portfolio-card__thumb">
+              <img src="images/iD Link.png" alt="ID System">
+            </div>
+            <div class="portfolio-card__info">
+              <h4>ID System</h4>
+              <p>Web Development</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card" data-category="webdev" role="listitem">
+            <div class="portfolio-card__thumb">
+              <img src="images/prioritycare.png" alt="Priority Care">
+            </div>
+            <div class="portfolio-card__info">
+              <h4>Priority Care</h4>
+              <p>Web Development</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card" data-category="webdev" role="listitem">
+            <div class="portfolio-card__thumb">
+              <img src="images/salesdashboard.png" alt="Sales Dashboard">
+            </div>
+            <div class="portfolio-card__info">
+              <h4>Sales Dashboard</h4>
+              <p>Web Development</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card" data-category="data-analysis" role="listitem">
+            <div class="portfolio-card__thumb">
+              <img src="images/lasurecodashboard.png" alt="Lasureco Dashboard">
+            </div>
+            <div class="portfolio-card__info">
+              <h4>Lasureco Dashboard</h4>
+              <p>Application</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card" data-category="virtual-assistance" role="listitem">
+            <div class="portfolio-card__thumb">
+              <img src="images/socialdesign.png" alt="NextGrid Marketing">
+            </div>
+            <div class="portfolio-card__info">
+              <h4>NextGrid Marketing</h4>
+              <p>Virtual Assistance</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card" data-category="virtual-assistance" role="listitem">
+            <div class="portfolio-card__thumb">
+              <img src="images/filemanagement.png" alt="File Management">
+            </div>
+            <div class="portfolio-card__info">
+              <h4>File Management</h4>
+              <p>Virtual Assistance</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card" data-category="virtual-assistance" role="listitem">
+            <div class="portfolio-card__thumb">
+              <img src="images/emailmanagement.png" alt="Email Management">
+            </div>
+            <div class="portfolio-card__info">
+              <h4>Email Management</h4>
+              <p>Virtual Assistance</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card" data-category="virtual-assistance" role="listitem">
+            <div class="portfolio-card__thumb">
+              <img src="images/cleaningbusinesstracker.png" alt="Cleaning Business Tracker">
+            </div>
+            <div class="portfolio-card__info">
+              <h4>Cleaning Business Tracker</h4>
+              <p>Virtual Assistance</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card" data-category="virtual-assistance" role="listitem">
+            <div class="portfolio-card__thumb">
+              <img src="images/clickupsample.jpg" alt="Project Tracker">
+            </div>
+            <div class="portfolio-card__info">
+              <h4>Project Tracker</h4>
+              <p>Virtual Assistance</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card" data-category="virtual-assistance" role="listitem">
+            <div class="portfolio-card__thumb">
+              <img src="images/logodesign.png" alt="Logo Design">
+            </div>
+            <div class="portfolio-card__info">
+              <h4>Logo Design</h4>
+              <p>Virtual Assistance</p>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- ============ SECTION: CONTACT ============ -->
+      <section id="contact" class="section" aria-labelledby="contact-heading">
+        <h2 id="contact-heading" class="section__title">Contact</h2>
+        <p class="section__intro">Available for freelance projects, VA contracts, and data consulting. Drop a message!</p>
+
+        <!-- Interactive Map -->
+        <div class="contact-map" aria-label="Location map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124955.39447238564!2d124.22!3d8.22!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32fff3c6c5e2e9c7%3A0x2a43f4b8c4d4e4a0!2sIligan%20City%2C%20Lanao%20del%20Norte%2C%20Philippines!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s"
+            width="100%"
+            height="250"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Iligan City, Philippines location map">
+          </iframe>
+        </div>
+
+        <!-- Learner note: no <form> tag per requirements; handled by JS -->
+        <div class="contact-form" aria-label="Contact form">
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="c-name">Full Name</label>
+              <input type="text" id="c-name" placeholder="Jane Smith" />
+            </div>
+            <div class="form-group">
+              <label for="c-email">Email</label>
+              <input type="email" id="c-email" placeholder="jane@example.com" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="c-subject">Subject</label>
+            <input type="text" id="c-subject" placeholder="Project inquiry..." />
+          </div>
+
+          <div class="form-group">
+            <label for="c-msg">Message</label>
+            <textarea id="c-msg" rows="5" placeholder="Tell me about your project..."></textarea>
+          </div>
+
+          <button class="btn-send" id="sendBtn">Send Message</button>
+          <p class="form-feedback" id="formFeedback" aria-live="polite"></p>
+
+        </div>
+      </section>
+
+    </main>
+  </div><!-- /wrapper -->
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image preview">
+    <button class="lightbox__close" id="lightboxClose" aria-label="Close">&times;</button>
+    <div class="lightbox__content">
+      <img class="lightbox__image" id="lightboxImage" src="" alt="">
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    emailjs.init('RZnl-c-h_BmoivSEI');
+  </script>
+  <script src="js/nav.js"></script>
+  <script src="js/filter.js"></script>
+  <script src="js/contact.js"></script>
+  <script src="js/portfolio.js"></script>
+  <script src="js/animations.js"></script>
+<script src="js/theme.js"></script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+/*
+ * nav.css
+ * ─────────────────────────────────────────────────────────
+ * LEARNER NOTE:
+ * The top navigation bar switches between sections.
+ * The .active class is toggled by JS (nav.js).
+ * The animated underline uses a pseudo-element + transform.
+ * ─────────────────────────────────────────────────────────
+ */
+
+.top-nav {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid var(--clr-border);
+  padding: 0 var(--sp-5);
+  background: var(--clr-surface);
+  flex-shrink: 0; /* Don't let nav shrink */
+}
+
+.nav-link {
+  position: relative;
+  font-family: var(--font-display);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--clr-text-muted);
+  padding: var(--sp-4) var(--sp-3);
+  letter-spacing: 0.02em;
+  transition: color var(--dur-base) var(--ease-smooth);
+
+  /* The underline indicator */
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -1px; /* Sits on the border-bottom line */
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--clr-accent);
+    border-radius: var(--radius-full);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform var(--dur-base) var(--ease-smooth);
+  }
+}
+
+.nav-link:hover {
+  color: var(--clr-text);
+}
+
+html.light-mode .nav-link {
+  color: #5a5a70;
+}
+
+html.light-mode .nav-link:hover {
+  color: #1a1a2e;
+}
+
+html.light-mode .nav-link.active {
+  color: #5a52e0;
+}
+
+/* Active state */
+.nav-link.active {
+  color: var(--clr-accent);
+}
+
+.nav-link.active::after {
+  transform: scaleX(1);
+}
+
+/* ── Responsive: allow nav to scroll horizontally ── */
+@media (max-width: 560px) {
+  .top-nav {
+    overflow-x: auto;
+    padding: 0 var(--sp-3);
+    scrollbar-width: none;
+  }
+  .top-nav::-webkit-scrollbar { display: none; }
+
+  .nav-link {
+    white-space: nowrap;
+    padding: var(--sp-3) var(--sp-2);
+  }
+}
+
+/* ── Theme Toggle (Switch) ── */
+.top-nav .theme-toggle {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  overflow: visible;
+  margin-left: auto;
+  margin-top: 10px;
+}
+
+.top-nav .toggle-track {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 30px;
+  background: var(--clr-surface-2);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-full);
+  padding: 2px;
+  position: relative;
+  transition: all var(--dur-base) var(--ease-smooth);
+  overflow: visible;
+}
+
+.top-nav .theme-toggle:hover .toggle-track {
+  border-color: var(--clr-accent);
+  box-shadow: 0 0 12px var(--clr-accent-glow);
+}
+
+html.light-mode .toggle-track {
+  background: #1a1a2e;
+  border-color: #5a52e0;
+}
+
+.side-icon {
+  position: absolute;
+  transition: opacity var(--dur-base) var(--ease-smooth), transform var(--dur-base) var(--ease-bounce);
+  pointer-events: none;
+}
+
+.sun-side {
+  left: 8px;
+  color: #f59e0b;
+  opacity: 0;
+  transform: scale(0.6);
+}
+
+.moon-side {
+  right: 8px;
+  color: #818cf8;
+  opacity: 1;
+  transform: scale(1);
+}
+
+html.light-mode .sun-side {
+  opacity: 1;
+  transform: scale(1);
+}
+
+html.light-mode .moon-side {
+  opacity: 0;
+  transform: scale(0.6);
+}
+
+.toggle-thumb {
+  position: absolute;
+  left: 4px;
+  width: 20px;
+  height: 20px;
+  background: var(--clr-accent);
+  border-radius: 50%;
+  transition: transform var(--dur-base) var(--ease-bounce), background var(--dur-base) var(--ease-smooth);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+html.light-mode .toggle-thumb {
+  transform: translateX(28px);
+  background: #f59e0b;
+}
