@@ -13,7 +13,7 @@
   /* ── Color Palette ── */
   --clr-bg:         #0f0f12;      /* Page background (near-black) */
   --clr-surface:    #16161d;      /* Card / panel surfaces        */
-  --clr-surface-2:  #1e1e28;      /* Slightly lighter surface     */
+  --clr-surface-2:  #141417;      /* Slightly lighter surface     */
   --clr-border:     rgba(255,255,255,0.07); /* Subtle borders     */
 
   --clr-accent:     #6c63ff;      /* Primary accent – soft violet */

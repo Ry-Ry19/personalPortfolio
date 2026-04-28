@@ -66,11 +66,8 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--clr-white);
-  background: linear-gradient(135deg, var(--clr-accent), var(--clr-accent-2));
   padding: var(--sp-1) var(--sp-4);
-  border-radius: var(--radius-full);
   white-space: nowrap;
-  box-shadow: 0 2px 12px var(--clr-accent-glow);
 }
 
 /* ── Info list ── */
@@ -103,6 +100,7 @@
 .sidebar__info .email-wrap {
   word-break: break-all;
   line-height: 1.5;
+  
 }
 
 .sidebar__info .icon {

@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let isTyping = false;
 
     subtitle.style.borderRight = '2px solid var(--clr-accent)';
-    subtitle.style.paddingRight = '4px';
+    subtitle.style.paddingRight = '1px';
 
     function typeNext() {
       isTyping = true;

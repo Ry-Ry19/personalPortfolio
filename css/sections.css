@@ -63,7 +63,6 @@
 .service-card {
   background: var(--clr-surface-2);
   border: 1px solid var(--clr-border);
-  border-radius: var(--radius-lg);
   padding: var(--sp-5);
   display: flex;
   flex-direction: column;
@@ -416,8 +415,14 @@ html.light-mode .section__intro {
 
 html.light-mode .service-card {
   background: #ffffff;
-  border-color: rgba(0,0,0,0.10);
+  border-color: rgba(0, 0, 0, 0.3);
 }
+
+html.light-mode .service-card:hover {
+  border-color: #5a52e0;
+  box-shadow: 0 4px 24px rgba(90,82,224,0.25); 
+}
+
 
 html.light-mode .service-card h3 {
   color: #1a1a2e;
